@@ -4,8 +4,6 @@ from django.core.management import call_command
 from django.db.utils import OperationalError
 from django.test import TestCase
 
-# from myapp.management.commands import wait_for_db
-
 
 class CommandTests(TestCase):
 
