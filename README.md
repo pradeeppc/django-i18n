@@ -1,0 +1,1 @@
+# django-i18n
