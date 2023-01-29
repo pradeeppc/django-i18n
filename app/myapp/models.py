@@ -25,8 +25,8 @@ class Article(BaseModel):
     def __init__(self, *args, **kwargs):
         super(Article, self).__init__(*args, **kwargs)
         if not self.title:
-            default_dict = {x[0]: [{field.name: '' for field in Article._meta.local_fields if field.name != 'translation'}] for x in settings.LANGUAGES}
-            self.translation.update(default_dict)
+            default_fields_value = {x[0]: [{field.name: '' for field in Article._meta.local_fields if field.name != 'translation'}] for x in settings.LANGUAGES}
+            self.translation.update(default_fields_value)
 
     def __str__(self):
-        return f'Title - {self.title}'
+        return f'Title - {self.title} | Description - {self.description} | Translation - {self.translation}'
