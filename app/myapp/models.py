@@ -6,6 +6,23 @@ from django.conf import settings
 
 
 class BaseModel(models.Model):
+    '''
+    translation sample json for Article model
+    {
+        "en": [{
+            "title": "",
+            "description": ""
+        }],
+        "fr": [{
+            "title": "",
+            "description": ""
+        }],
+        "es": [{
+            "title": "",
+            "description": ""
+        }]
+    }
+    '''
 
     class Meta:
         abstract = True
